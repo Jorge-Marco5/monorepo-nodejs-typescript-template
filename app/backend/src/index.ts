@@ -3,24 +3,13 @@ import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
-import winston from "winston";
 import exampleRoutes from "./routes/exampleRoutes";
+import logger from "./utils/logger";
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
-
-// Logger setup
-const logger = winston.createLogger({
-  level: "info",
-  format: winston.format.json(),
-  transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({ filename: "error.log", level: "error" }),
-    new winston.transports.File({ filename: "combined.log" }),
-  ],
-});
 
 // Middleware
 app.use(cors());

@@ -12,7 +12,7 @@ importers:
         specifier: ^8.2.2
         version: 8.2.2
 
-  packages/backend:
+  app/backend:
     dependencies:
       cors:
         specifier: ^2.8.5
@@ -55,7 +55,7 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
 
-  packages/frontend:
+  app/frontend:
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.17
